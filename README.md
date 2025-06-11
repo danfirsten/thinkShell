@@ -22,9 +22,14 @@ thinkShell/
 │       ├── debug.py        # Code debugging functionality
 │       ├── optimize.py     # Code optimization functionality
 │       └── utils.py        # Shared utilities and OpenAI integration
-├── docs/
-│   └── README.md          # This documentation
-└── main.py                # Entry point
+├── tests/
+│   └── test_utils.py      # Unit tests
+├── .env.example           # Template for environment variables
+├── .gitignore            # Git ignore rules
+├── main.py               # Entry point
+├── pyproject.toml        # Project metadata and dependencies
+├── requirements.txt      # Python package dependencies
+└── setup.py             # Package installation script
 ```
 
 ## Features
@@ -36,6 +41,7 @@ python main.py explain <file_path>
 - Reads the specified file
 - Sends the code to GPT-4 for analysis
 - Returns a detailed explanation of the code's functionality
+- Includes debug prints to track progress
 
 ### 2. Code Debugging
 ```bash
@@ -44,6 +50,7 @@ python main.py debug <file_path>
 - Analyzes the code for potential bugs
 - Provides explanations for any issues found
 - Returns "No bugs found" if the code appears to be bug-free
+- Includes detailed error messages and suggestions
 
 ### 3. Code Optimization
 ```bash
@@ -52,10 +59,17 @@ python main.py optimize <file_path>
 - Reviews the code for optimization opportunities
 - Suggests improvements for performance, readability, and best practices
 - Provides detailed explanations for each suggestion
+- Focuses on both code quality and performance
 
 ## Setup
 
-1. **Install Dependencies**
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/yourusername/thinkShell.git
+   cd thinkShell
+   ```
+
+2. **Install Dependencies**
    ```bash
    pip install -r requirements.txt
    ```
@@ -119,13 +133,3 @@ The tool includes comprehensive error handling for:
 - API request failures
 - File reading errors
 
-## Contributing
-
-Feel free to contribute to this project by:
-1. Forking the repository
-2. Creating a feature branch
-3. Submitting a pull request
-
-## License
-
-[Add your license information here] 
